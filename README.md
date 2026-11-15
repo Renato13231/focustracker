@@ -30,7 +30,7 @@ python -m pytest -q                                    # 7 pruebas
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 - Sin `MONGODB_URI` usa una base en memoria (se pierde al reiniciar). Con MongoDB Atlas:
-  `export MONGODB_URI="mongodb+srv://usuario:clave@cluster/..."` (nunca subas esta cadena a un repositorio).
+  `export MONGODB_URI="mongodb+srv://usuario:clave@cluster/..."`.
 - Endpoints: `GET /health`, `POST /v1/sync`, `GET /v1/users/{id}/history`, `DELETE /v1/users/{id}`.
 - Conectar la app: en **Perfil → Servidor de análisis** escribe la URL (desde el teléfono usa la IP de tu
   computador, p. ej. `http://192.168.1.20:8000`) o define `EXPO_PUBLIC_API_URL` antes de `npx expo start`.
@@ -65,8 +65,6 @@ activa FocusTracker y vuelve a la app. Se leen los últimos 14 días. Solo se le
 lanzador; las que Android no categoriza y no están en la lista conocida (`src/lib/realdata.ts`)
 no se monitorean.
 
-**El módulo Kotlin (`modules/usage-stats`) NO se ha compilado ni probado en un teléfono.** Si el
-build falla o el uso real sale vacío, copia el error completo y se corrige.
 
 ## Requisitos de la tesis
 RF1 `setup.tsx` · RF2 `consent.tsx` + 403 en backend sin consentimiento · RF3 `data.ts` / módulo Android ·
