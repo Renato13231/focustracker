@@ -1,10 +1,6 @@
-fastapi
-uvicorn[standard]
-pymongo
-scikit-learn
-numpy
-joblib
-# solo desarrollo / pruebas
-mongomock
-pytest
-httpx
+fastapi==0.163.1
+uvicorn==0.54.0
+pymongo==4.20.0
+scikit-learn==1.9.1
+numpy==2.5.4
+joblib==1.6.0

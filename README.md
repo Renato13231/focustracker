@@ -24,7 +24,7 @@ Funciona sola, con datos simulados y clasificación por reglas.
 ```bash
 cd backend
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 python -m app.model                                    # entrena y guarda models/rf.joblib
 python -m pytest -q                                    # 7 pruebas
 uvicorn app.main:app --host 0.0.0.0 --port 8000

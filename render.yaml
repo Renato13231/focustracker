@@ -1,0 +1,15 @@
+# Blueprint de Render: publica el backend de FocusTracker con HTTPS (plan gratuito).
+services:
+  - type: web
+    name: focustracker-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt && python -m app.model
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: MONGODB_URI
+        sync: false   # se pega a mano en el panel de Render; nunca en el repositorio
+      - key: MONGODB_DB
+        value: focustracker
