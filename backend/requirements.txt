@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pymongo
+scikit-learn
+numpy
+joblib
+# solo desarrollo / pruebas
+mongomock
+pytest
+httpx

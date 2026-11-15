@@ -1,25 +1,47 @@
 {
   "expo": {
-    "name": "focustracker",
+    "name": "FocusTracker",
     "slug": "focustracker",
     "version": "1.0.0",
+    "scheme": "focustracker",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F4F8FB"
     },
     "android": {
+      "package": "cl.renato.focustracker",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "cl.renato.focustracker",
+      "supportsTablet": true
     },
     "web": {
+      "bundler": "metro",
+      "output": "single",
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "119c881a-564a-4a51-afed-68d23fb5c977"
+      }
+    },
+    "owner": "renato13231"
   }
 }
